@@ -11,16 +11,11 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
   getAllProducts() {
-    return this.httpClient.get(`${this.API_URL}/product/retrieve-all-produits`)
+    return this.httpClient.get(`${this.API_URL}/produit/retrieve-all-produits`)
   }
   addProduct(product : any) {
-    return this.httpClient.post(`${this.API_URL}/product/add-produit`, product)
+    return this.httpClient.post(`${this.API_URL}/produit/add-produit`, product)
   }
-  editProduct(product : any){
-    return this.httpClient.put(`${this.API_URL}/product/modify-produit`, product)
-  }
-  deleteProduct(idProduct : any){
-    return  this.httpClient.delete(`${this.API_URL}/product/remove-produit/${idProduct}`)
-  }
+  
 
 }

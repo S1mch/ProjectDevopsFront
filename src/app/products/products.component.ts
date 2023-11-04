@@ -43,13 +43,7 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  editProduct(product: Product) {
-    this.productService.editProduct(product).subscribe();
-  }
 
-  deleteProduct(idProduct: any) {
-    this.productService.deleteProduct(idProduct).subscribe(() => this.getAllProducts())
-  }
 
   open(content: any, action: any) {
     if (action != null)
